@@ -13,10 +13,30 @@ pip install nbdev_hello_world
 
 ## How to use
 
-Fill me in please! Don’t forget code examples:
+Here’s how to display SVGs in Notebooks:
 
 ``` python
-1+1
+from IPython.display import display,SVG
+
+display(SVG('<svg height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40"/></svg>'))
 ```
 
-    2
+![](index_files/figure-commonmark/cell-2-output-1.svg)
+
+## Previewing your changes
+
+Use `nbdev_preview` to launch a live preview of your changes in the
+browser.
+
+## Before committing changes
+
+Use `nbdev_prepare` to validate your changes
+
+which bundles the following commands:
+
+- `nbdev_export`: Builds the .py modules from Jupyter notebooks
+- `nbdev_test`: Tests your notebooks
+- `nbdev_clean`: Cleans your notebooks to get rid of extreanous output
+  for git
+- `nbdev_readme`: Updates your repo’s README.md file from your index
+  notebook.
